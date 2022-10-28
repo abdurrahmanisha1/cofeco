@@ -2,7 +2,7 @@
  *  Owl Carousel - Animate Plugin
  */
 
- .owl-carousel .animated {
+.owl-carousel .animated {
     -webkit-animation-duration: 1000ms;
     animation-duration: 1000ms;
     -webkit-animation-fill-mode: both;
@@ -26,6 +26,7 @@
     0% {
         opacity: 1;
     }
+
     100% {
         opacity: 0;
     }
@@ -35,6 +36,7 @@
     0% {
         opacity: 1;
     }
+
     100% {
         opacity: 0;
     }

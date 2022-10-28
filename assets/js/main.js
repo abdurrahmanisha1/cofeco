@@ -1,4 +1,4 @@
-(function($) {
+(function ($) {
     "use strict";
 
     /* Wow js init
@@ -7,7 +7,7 @@
 
     /* Sticky Header
     -----------------------------*/
-    $(window).scroll(function() {
+    $(window).scroll(function () {
         var scroll = $(window).scrollTop();
         if (scroll < 170) {
             $(".header-main-menu").removeClass("sticky");
@@ -18,21 +18,21 @@
 
     /* Preloader
     -----------------------------*/
-    $(window).on('load', function() {
+    $(window).on('load', function () {
         var preLoder = $("#preloader");
         preLoder.fadeOut(1000);
     });
 
     /* Back to top
     -----------------------------*/
-    $(".back-to-top").on("click", function() {
+    $(".back-to-top").on("click", function () {
         $("html,body").animate({
             scrollTop: 0
         }, 2000);
     });
 
     var lastScrollTop = '';
-    $(window).on('scroll', function() {
+    $(window).on('scroll', function () {
         var ScrollTop = $('.back-to-top');
         if ($(window).scrollTop() > 1000) {
             ScrollTop.fadeIn(1000);
@@ -128,7 +128,7 @@
     /* Progress Bar
     ------------------------------------ */
     if ($('.progress_line').length) {
-        $('.progress_line').appear(function() {
+        $('.progress_line').appear(function () {
             var el = $(this);
             var percent = el.data('width');
             $(el).css('width', percent + '%');
@@ -139,14 +139,14 @@
 
     /* Mobile Menu
     -----------------------------*/
-    var clMobileMenu = function() {
+    var clMobileMenu = function () {
 
         var navWrap = $('.header-nav-wrap'),
             closeNavWrap = navWrap.find('.header-overlay-close'),
             menuToggle = $('.header-toggle-menu'),
             siteBody = $('body');
 
-        menuToggle.on('click', function(e) {
+        menuToggle.on('click', function (e) {
             var $this = $(this);
 
             e.preventDefault();
@@ -154,7 +154,7 @@
             siteBody.addClass('nav-wrap-is-visible');
         });
 
-        closeNavWrap.on('click', function(e) {
+        closeNavWrap.on('click', function (e) {
             var $this = $(this);
 
             e.preventDefault();
@@ -167,7 +167,7 @@
 
         // open (or close) submenu items in mobile view menu. 
         // close all the other open submenu items.
-        $('.header-nav .has-children').children('a').on('click', function(e) {
+        $('.header-nav .has-children').children('a').on('click', function (e) {
             e.preventDefault();
 
             if ($(".close-mobile-menu").is(":visible") == true) {

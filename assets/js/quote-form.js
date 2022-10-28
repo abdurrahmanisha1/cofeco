@@ -1,4 +1,4 @@
-$(function() {
+$(function () {
 
     // Get the form.
     var form = $('#ajax-contact');
@@ -7,7 +7,7 @@ $(function() {
     var formMessages = $('#form-messages');
 
     // Set up an event listener for the contact form.
-    $(form).submit(function(e) {
+    $(form).submit(function (e) {
         // Stop the browser from submitting the form.
         e.preventDefault();
 
@@ -16,11 +16,11 @@ $(function() {
 
         // Submit the form using AJAX.
         $.ajax({
-                type: 'POST',
-                url: $(form).attr('action'),
-                data: formData
-            })
-            .done(function(response) {
+            type: 'POST',
+            url: $(form).attr('action'),
+            data: formData
+        })
+            .done(function (response) {
                 // Make sure that the formMessages div has the 'success' class.
                 $(formMessages).removeClass('error');
                 $(formMessages).addClass('success');
@@ -34,7 +34,7 @@ $(function() {
                 $('#email').val('');
                 $('#message').val('');
             })
-            .fail(function(data) {
+            .fail(function (data) {
                 // Make sure that the formMessages div has the 'error' class.
                 $(formMessages).removeClass('success');
                 $(formMessages).addClass('error');

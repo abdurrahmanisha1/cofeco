@@ -1,4 +1,4 @@
-var accordion = (function() {
+var accordion = (function () {
 
     var $accordion = $('.js-accordion');
     var $accordion_header = $accordion.find('.js-accordion-header');
@@ -15,8 +15,8 @@ var accordion = (function() {
 
     return {
         // pass configurable object literal
-        init: function($settings) {
-            $accordion_header.on('click', function() {
+        init: function ($settings) {
+            $accordion_header.on('click', function () {
                 accordion.toggle($(this));
             });
 
@@ -30,7 +30,7 @@ var accordion = (function() {
             // reveal the active accordion bodies
             $('.js-accordion-item.active').find('> .js-accordion-body').show();
         },
-        toggle: function($this) {
+        toggle: function ($this) {
 
             if (settings.oneOpen && $this[0] != $this.closest('.js-accordion').find('> .js-accordion-item.active > .js-accordion-header')[0]) {
                 $this.closest('.js-accordion')
@@ -47,6 +47,6 @@ var accordion = (function() {
     }
 })();
 
-$(document).ready(function() {
+$(document).ready(function () {
     accordion.init({ speed: 300, oneOpen: true });
 });
